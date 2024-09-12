@@ -2,6 +2,7 @@
 /.envrc
 .ipynb_checkpoints/
 /.venv/
+/venv/
 
 # Downloaded dataset files. Maybe this is uncalled for if the datasets are small.
 *.grib

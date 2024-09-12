@@ -13,6 +13,20 @@
         (python3.withPackages (ps: with ps; [
           virtualenv
         ]))
+
+        (rstudioWrapper.override { packages = with rPackages; [
+          plyr
+          shiny
+          dplyr
+          rjson
+          ggplot2
+          plotly
+          data_table
+          DT
+          tidyr
+          scales
+          flexdashboard
+        ]; })
       ];
 
       # Without this, jupyter-notebook complains about stdlibc++.so.6

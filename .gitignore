@@ -3,6 +3,7 @@
 .ipynb_checkpoints/
 /.venv/
 /venv/
+/data/
 
 # Downloaded dataset files. Maybe this is uncalled for if the datasets are small.
 *.grib

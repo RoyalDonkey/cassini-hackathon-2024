@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+  }
+  
+  h1 {
+    color: #006288;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 40px;
+  }
+
+  h2 {
+    color: #447F00;
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  #top {
+    background-color: #447F00;
+    color: #ffffff;
+    padding: 15px;
+}
+
+#top, #sidebar, #bottom, .menuitem {
+    border-radius: 15px;
+    margin: 4px;
+}
+
+p {
+    color: #006288;
+    margin-left: 20px;
+    text-transform: uppercase;
+  }
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    top: 0;
+    width: 100%;
+  }
+  
+  
+  img {
+    width: 100%;
+  }
+
+
+  .nav-pills>li>a:hover, .nav-pills>li.active>a,   .nav-pills>li.active>a:hover {
+    background-color: rgba(69, 155, 189, 0.5);
+    color:#ffffff;
+    border-radius: 10px;
+    width: 125px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .nav-pills>li>a:focus, .nav-pills>li.active>a:focus {
+    background-color: #006288;
+    color:#ffffff;
+    border-radius: 10px;
+    width: 125px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .nav-pills>li>a {
+    color: #006288;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 97, 136, 0.3);
+    width: 125px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #006288;
+    background-color: #ffffff;
+  }
+  
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

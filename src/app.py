@@ -54,7 +54,7 @@ app.layout = html.Div([
     html.Div([
         html.Div([
             html.Img(src='/assets/logo2.png',
-                    style={  
+                    style={
                     'height': '60px', 'width': '70px'
                 }),
             html.Div('Cat4Green', style={'fontSize': 40, 'color': '#447F00', 'font-weight': 'bold', 'height': '60px', 'text-align': 'bottom'})
@@ -62,9 +62,9 @@ app.layout = html.Div([
         html.Div([
             dcc.Link('Home', href='/'),
             dcc.Link('Search Engine', href='/search'),
-            dcc.Link('Map', href='/map') 
+            dcc.Link('Map', href='/map')
         ],  style={'display': 'flex', 'flexDirection': 'row', 'justifyContent': 'space-around', 'padding': '10px'}),
-        
+
     ], style={'display': 'flex', 'flexDirection': 'column', 'padding': '10px'}),
 
     html.Div(id='page-content')], style={'flex': 1, 'padding': '10px'}),

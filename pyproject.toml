@@ -3,6 +3,7 @@ include = ["src"]
 
 reportMissingImports = false
 reportMissingTypeStubs = false
+reportAttributeAccessIssue = false
 
 pythonVersion = "3.12"
 pythonPlatform = "All"

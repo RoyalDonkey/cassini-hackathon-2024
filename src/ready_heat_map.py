@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.express as px
 
-df = pd.read_csv('data/filtered_data.csv')
+df = pd.read_csv('data/filtered_big_data.csv')
 
 # Set up the Dash app
 app = dash.Dash(__name__)
@@ -14,7 +14,12 @@ app = dash.Dash(__name__)
 def create_map(year, category):
     # Filter the data for the selected year
     filtered_df = df[df['time'] == year]
-    
+    color_scales = {
+        'mean_t': 'Jet',
+        'hot_d': 'YlOrBr',
+        'cold_d': 'dense',
+        'droughts': 'Oranges'
+    }
     # Create the map
     fig = px.density_mapbox(
         filtered_df, 
@@ -25,7 +30,7 @@ def create_map(year, category):
         center=dict(lat=50, lon=10),  # Center the map over Europe
         zoom=3, 
         mapbox_style="carto-positron",  # Use a Mapbox style
-        color_continuous_scale='YlOrRd',
+        color_continuous_scale=color_scales[category],
         title=f'{category.capitalize()} Heatmap for {year}'
     )
     return fig
@@ -44,12 +49,14 @@ app.layout = html.Div([
         value='droughts',  # Default value
         clearable=False
     ),
+
+
     dcc.Slider(
         id='year-slider',
         min=df['time'].min(),
         max=df['time'].max(),
         value=df['time'].min(),
-        marks={str(year): str(year) for year in df['time'].unique()},
+        marks={ str(year) if year%5==0 else " ": str(year) for year in df['time'].unique()},
         step=None
     ),
     dcc.Graph(id='heatmap')
